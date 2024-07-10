@@ -2,12 +2,15 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] list = {1, 1, 1, 1, 4, 6, 3, 4, 8, 20, 10, 10, 10, 20, 20, 20, 4, -3, -3};
+        int[] list = {1, 1, 1, 1, 4, 6,6, 3, 4, 8, 20, 10, 10, 10, 20, 20, 20, 4, -3, -3};
         int[][] matrix = repeatingNum(list);//matrisin ilk satırına listemizi sıralayaaarak yazdık ikinci satıra tekrar sayılarını yazdık
         int i = 0;
+
+        System.out.println(Arrays.toString(matrix[0]));
+        System.out.println(Arrays.toString(matrix[1]));
         while (i < matrix[0].length) {
             System.out.println("Eleman: " + matrix[0][i] + " Tekrar sayısı: " + matrix[1][i]);
-            i += matrix[1][i];
+            i += matrix[1][i];//TEKRAR SAYISI KADAR ARTIRDIK
         }
     }
     static int[][] repeatingNum(int[] list) {
